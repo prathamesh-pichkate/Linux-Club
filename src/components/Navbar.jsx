@@ -18,30 +18,34 @@ const Navbar = () => {
                         <img src={logo} alt="linux-logo" className="h-14 lg:h-20 md:h-20 mr-2" />
                     </div>
                     
+                    {/* Desktop Menu */}
                     <ul className="hidden lg:flex ml-6 space-x-8">
                         {navItems.map((item) => (
-                            <li key={item.label}>
-                                <NavLink
-                                    to={item.href}
-                                    className={({ isActive }) => 
-                                    `text-xl ${isActive ? "text-white" : "text-gray-800"}`}
-                                >
-                                    {item.label}
-                                </NavLink>
-                            </li>
+                          <li key={item.label}>
+                            <NavLink
+                              to={item.href}
+                              className={({ isActive }) => 
+                                `text-xl ${isActive ? "text-orange-400 pb-1 border-b-2 border-orange-400" : "text-white"}`
+                              }
+                            >
+                              {item.label}
+                            </NavLink>
+                          </li>
                         ))}
-                    </ul>
-
+                      </ul>
+                    {/* Join Our Team Button for Desktop */}
                     <div className="hidden lg:flex justify-center space-x-8 items-center">
                         <a href="#" className="bg-gradient-to-r from-purple-500 to-purple-800 py-2 px-3 rounded-md">Join Our Team</a>
                     </div>
                      
+                    {/* Mobile Menu Toggle Button */}
                     <div className="lg:hidden md:flex flex-col justify-end">
                         <button onClick={toggleNavbar}>
                             {mobileDrawerOpen ? <X /> : <Menu />}
                         </button>
                     </div>
                      
+                    {/* Mobile Drawer */}
                     {mobileDrawerOpen && (
                         <div className="fixed top-0 left-0 z-20 bg-neutral-900 w-full h-screen p-10 flex flex-col lg:hidden overflow-y-auto">
                             <div className="flex justify-end w-full mb-6">
@@ -55,7 +59,7 @@ const Navbar = () => {
                                         <NavLink
                                             to={item.href}
                                             className={({ isActive }) => 
-                                            `block text-xl ${isActive ? "text-white" : "text-gray-800"}`}
+                                            `block text-xl ${isActive ? "text-orange-400 underline" : "text-white"}`}
                                             onClick={toggleNavbar} // Close the drawer when a link is clicked
                                         >
                                             {item.label}
