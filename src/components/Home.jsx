@@ -1,6 +1,7 @@
 import penguin from "../assets/images/image.png";
 import AboutUs from "../components/AboutUs";
 import OurMission from "../components/OurMission";
+import OurActivities from "../components/OurActivities";
 const Home = () => {
   return (
     <>
@@ -59,6 +60,13 @@ const Home = () => {
 
       {/* About Us Section */}
       <OurMission />
+
+
+      {/* Adding a Spacer for Clear Separation */}
+      <div className="my-12"></div>
+
+      {/* About Us Section */}
+      <OurActivities />
     </>
   );
 };
