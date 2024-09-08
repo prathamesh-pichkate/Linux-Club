@@ -2,6 +2,8 @@ import penguin from "../assets/images/image.png";
 import AboutUs from "../components/AboutUs";
 import OurMission from "../components/OurMission";
 import OurActivities from "../components/OurActivities";
+import BlogsAndEvents from "../components/BlogsAndEvents"
+
 const Home = () => {
   return (
     <>
@@ -67,6 +69,12 @@ const Home = () => {
 
       {/* About Us Section */}
       <OurActivities />
+
+      {/* Adding a Spacer for Clear Separation */}
+      <div className="my-20"></div>
+
+      {/* About Us Section */}
+      <BlogsAndEvents />
     </>
   );
 };
