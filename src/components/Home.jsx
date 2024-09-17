@@ -22,7 +22,7 @@ const Home = () => {
             Linux Club
           </h1>
           <p className="text-[3vh] sm:text-[3vh] lg:text-[5vh] tracking-wide bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text">
-            Learn, Grow, and Share
+            Learn, Grow, and 
           </p>
           <div className="flex flex-row justify-center lg:justify-start my-4 space-x-4">
             <a
